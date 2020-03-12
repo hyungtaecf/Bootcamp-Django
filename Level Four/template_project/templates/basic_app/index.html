@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+{% extends "basic_app/base.html" %}
+  {% block body_block %}
+  {% load my_extras %}
     <h1>WELCOME TO INDEX</h1>
-  </body>
-</html>
+    <!-- <h2>This is index.html page showing!</h2> -->
+    <h1>{{ text|cut_the_string:'world' }}</h1>
+    {{ number|add:99 }}
+  {% endblock %}
